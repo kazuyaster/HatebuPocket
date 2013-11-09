@@ -425,7 +425,7 @@
 				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
 				INFOPLIST_FILE = "HatebuPocket/HatebuPocket-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "65ACAB2D-24C7-41AD-B296-A623C008A333";
+				PROVISIONING_PROFILE = "8E5184C1-0ED8-4A22-8130-517EAA7A16C3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -441,7 +441,7 @@
 				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
 				INFOPLIST_FILE = "HatebuPocket/HatebuPocket-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "65ACAB2D-24C7-41AD-B296-A623C008A333";
+				PROVISIONING_PROFILE = "8E5184C1-0ED8-4A22-8130-517EAA7A16C3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
