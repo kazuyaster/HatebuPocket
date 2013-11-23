@@ -6,12 +6,13 @@
 //  Copyright (c) 2013年 小田 和哉. All rights reserved.
 //
 
-#import "FeedManager.h"
+#import "FeedDownloader.h"
 #import "AFURLSessionManager.h"
+#import "XMLReader.h"
 
-@implementation FeedManager
+@implementation FeedDownloader
 
-- (NSDictionary*)dictionaryFromRSSWithURL:(NSString*)urlString{
+- (void)dictionaryFromRSSWithURL:(NSString*)urlString{
     
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -27,13 +28,16 @@
                                                                      } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
                                                                          NSLog(@"File downloaded to: %@", filePath);
                                                                          
-                                                                         NSDictionary *userInfo = @{@"filePath": filePath};
+                                                                         NSString *feedString = [NSString stringWithContentsOfURL:filePath
+                                                                                                                         encoding:NSUTF8StringEncoding
+                                                                                                                            error:&error];
+                                                                         NSDictionary *feedDict = [XMLReader dictionaryForXMLString:feedString error:&error];
+                                                                         NSDictionary *userInfo = @{@"feed":feedDict};
                                                                          NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
                                                                          [notificationCenter postNotificationName:KODDownloadFeedNotification object:userInfo];
                                                                      }];
     [downloadTask resume];
- 
-    return [NSDictionary dictionary];
+
 }
 
 @end

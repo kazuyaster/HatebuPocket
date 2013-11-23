@@ -14,4 +14,14 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "Define.h"
+
+    //オブジェクトが空かどうか判別する
+    static inline BOOL isEmpty(id object) {
+        return object == nil
+        || ([object respondsToSelector:@selector(length)]
+            && [(NSData *) object length] == 0)
+        || ([object respondsToSelector:@selector(count)]
+            && [(NSArray *) object count] == 0)
+        || ( [[NSNull null]isEqual:object] );
+    }
 #endif

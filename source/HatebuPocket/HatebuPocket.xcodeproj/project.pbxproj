@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7D0C534EC02044FE91933169 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298930899A9648709C93FB6A /* libPods.a */; };
-		DF9F3590184094440041426E /* FeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F358F184094440041426E /* FeedManager.m */; };
+		DF9F3590184094440041426E /* FeedDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F358F184094440041426E /* FeedDownloader.m */; };
+		DF9F35961840B3FA0041426E /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F35951840B3FA0041426E /* XMLReader.m */; };
+		DFC21CB41840E5D80016826A /* FeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC21CB31840E5D80016826A /* FeedItem.m */; };
+		DFC21CB71840E6BC0016826A /* FeedItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC21CB61840E6BC0016826A /* FeedItemManager.m */; };
 		DFCCA0A2181D33F80059C870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A1181D33F80059C870 /* Foundation.framework */; };
 		DFCCA0A4181D33F80059C870 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */; };
 		DFCCA0A6181D33F80059C870 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A5181D33F80059C870 /* UIKit.framework */; };
@@ -38,9 +41,15 @@
 /* Begin PBXFileReference section */
 		298930899A9648709C93FB6A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		580BADEE5F014C9AA0A7AF68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		DF9F358E184094440041426E /* FeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedManager.h; sourceTree = "<group>"; };
-		DF9F358F184094440041426E /* FeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedManager.m; sourceTree = "<group>"; };
+		DF9F358E184094440041426E /* FeedDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDownloader.h; sourceTree = "<group>"; };
+		DF9F358F184094440041426E /* FeedDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDownloader.m; sourceTree = "<group>"; };
 		DF9F359118409C3F0041426E /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		DF9F35941840B3FA0041426E /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		DF9F35951840B3FA0041426E /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		DFC21CB21840E5D80016826A /* FeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItem.h; sourceTree = "<group>"; };
+		DFC21CB31840E5D80016826A /* FeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItem.m; sourceTree = "<group>"; };
+		DFC21CB51840E6BC0016826A /* FeedItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemManager.h; sourceTree = "<group>"; };
+		DFC21CB61840E6BC0016826A /* FeedItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemManager.m; sourceTree = "<group>"; };
 		DFCCA09E181D33F80059C870 /* HatebuPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatebuPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCCA0A1181D33F80059C870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +131,8 @@
 		DFCCA0A7181D33F80059C870 /* HatebuPocket */ = {
 			isa = PBXGroup;
 			children = (
+				DF9F35941840B3FA0041426E /* XMLReader.h */,
+				DF9F35951840B3FA0041426E /* XMLReader.m */,
 				DFCCA0B0181D33F80059C870 /* AppDelegate.h */,
 				DFCCA0B1181D33F80059C870 /* AppDelegate.m */,
 				DFCCA0B3181D33F80059C870 /* Main.storyboard */,
@@ -129,9 +140,13 @@
 				DFCCA0B7181D33F80059C870 /* ViewController.m */,
 				DFCCA0B9181D33F80059C870 /* Images.xcassets */,
 				DFCCA0A8181D33F80059C870 /* Supporting Files */,
-				DF9F358E184094440041426E /* FeedManager.h */,
-				DF9F358F184094440041426E /* FeedManager.m */,
+				DF9F358E184094440041426E /* FeedDownloader.h */,
+				DF9F358F184094440041426E /* FeedDownloader.m */,
 				DF9F359118409C3F0041426E /* Define.h */,
+				DFC21CB21840E5D80016826A /* FeedItem.h */,
+				DFC21CB31840E5D80016826A /* FeedItem.m */,
+				DFC21CB51840E6BC0016826A /* FeedItemManager.h */,
+				DFC21CB61840E6BC0016826A /* FeedItemManager.m */,
 			);
 			path = HatebuPocket;
 			sourceTree = "<group>";
@@ -299,8 +314,11 @@
 			files = (
 				DFCCA0B8181D33F80059C870 /* ViewController.m in Sources */,
 				DFCCA0B2181D33F80059C870 /* AppDelegate.m in Sources */,
+				DF9F35961840B3FA0041426E /* XMLReader.m in Sources */,
 				DFCCA0AE181D33F80059C870 /* main.m in Sources */,
-				DF9F3590184094440041426E /* FeedManager.m in Sources */,
+				DFC21CB71840E6BC0016826A /* FeedItemManager.m in Sources */,
+				DFC21CB41840E5D80016826A /* FeedItem.m in Sources */,
+				DF9F3590184094440041426E /* FeedDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FeedManager : NSObject
+@interface FeedDownloader : NSObject
 
-- (NSDictionary*)dictionaryFromRSSWithURL:(NSString*)urlString;
+- (void)dictionaryFromRSSWithURL:(NSString*)urlString;
 @end
