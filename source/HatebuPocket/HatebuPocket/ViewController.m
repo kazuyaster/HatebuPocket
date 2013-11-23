@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "FeedManager.h"
 
-@interface ViewController ()
+#define BASE_URL @"http://b.hatena.ne.jp/entrylist/it?sort=hot&threshold=&mode=rss"
+
+
+@interface ViewController (){
+    FeedManager *_feedManager;
+}
 
 @end
 
@@ -17,13 +23,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    _feedManager = [[FeedManager alloc] init];
+    NSDictionary *feedDict = [_feedManager dictionaryFromRSSWithURL:BASE_URL];
+    
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(downloadedFeed:) name:KODDownloadFeedNotification object:nil];
+    NSLog(@"%@",feedDict);
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc{
+    
+}
+
+-(void)downloadedFeed:(NSNotification*)notification{
+    NSLog(@"DOWNLOADED:%@",notification);
 }
 
 @end
