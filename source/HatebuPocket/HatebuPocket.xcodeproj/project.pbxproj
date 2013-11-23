@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D0C534EC02044FE91933169 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298930899A9648709C93FB6A /* libPods.a */; };
+		DF9F3590184094440041426E /* FeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F358F184094440041426E /* FeedManager.m */; };
 		DFCCA0A2181D33F80059C870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A1181D33F80059C870 /* Foundation.framework */; };
 		DFCCA0A4181D33F80059C870 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */; };
 		DFCCA0A6181D33F80059C870 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A5181D33F80059C870 /* UIKit.framework */; };
@@ -37,6 +38,9 @@
 /* Begin PBXFileReference section */
 		298930899A9648709C93FB6A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		580BADEE5F014C9AA0A7AF68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DF9F358E184094440041426E /* FeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedManager.h; sourceTree = "<group>"; };
+		DF9F358F184094440041426E /* FeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedManager.m; sourceTree = "<group>"; };
+		DF9F359118409C3F0041426E /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
 		DFCCA09E181D33F80059C870 /* HatebuPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatebuPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCCA0A1181D33F80059C870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +129,9 @@
 				DFCCA0B7181D33F80059C870 /* ViewController.m */,
 				DFCCA0B9181D33F80059C870 /* Images.xcassets */,
 				DFCCA0A8181D33F80059C870 /* Supporting Files */,
+				DF9F358E184094440041426E /* FeedManager.h */,
+				DF9F358F184094440041426E /* FeedManager.m */,
+				DF9F359118409C3F0041426E /* Define.h */,
 			);
 			path = HatebuPocket;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 				DFCCA0B8181D33F80059C870 /* ViewController.m in Sources */,
 				DFCCA0B2181D33F80059C870 /* AppDelegate.m in Sources */,
 				DFCCA0AE181D33F80059C870 /* main.m in Sources */,
+				DF9F3590184094440041426E /* FeedManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
