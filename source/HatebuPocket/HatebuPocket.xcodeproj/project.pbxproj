@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D0C534EC02044FE91933169 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298930899A9648709C93FB6A /* libPods.a */; };
+		DF12B93F1841DE6D00660DE7 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF12B93E1841DE6D00660DE7 /* CategoryViewController.m */; };
 		DF9F3590184094440041426E /* FeedDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F358F184094440041426E /* FeedDownloader.m */; };
 		DF9F35961840B3FA0041426E /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F35951840B3FA0041426E /* XMLReader.m */; };
 		DFC21CB41840E5D80016826A /* FeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC21CB31840E5D80016826A /* FeedItem.m */; };
@@ -19,7 +20,7 @@
 		DFCCA0AE181D33F80059C870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0AD181D33F80059C870 /* main.m */; };
 		DFCCA0B2181D33F80059C870 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0B1181D33F80059C870 /* AppDelegate.m */; };
 		DFCCA0B5181D33F80059C870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCCA0B3181D33F80059C870 /* Main.storyboard */; };
-		DFCCA0B8181D33F80059C870 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0B7181D33F80059C870 /* ViewController.m */; };
+		DFCCA0B8181D33F80059C870 /* HotEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0B7181D33F80059C870 /* HotEntryViewController.m */; };
 		DFCCA0BA181D33F80059C870 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCCA0B9181D33F80059C870 /* Images.xcassets */; };
 		DFCCA0C1181D33F80059C870 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0C0181D33F80059C870 /* XCTest.framework */; };
 		DFCCA0C2181D33F80059C870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A1181D33F80059C870 /* Foundation.framework */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		298930899A9648709C93FB6A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		580BADEE5F014C9AA0A7AF68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DF12B93D1841DE6D00660DE7 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		DF12B93E1841DE6D00660DE7 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		DF9F358E184094440041426E /* FeedDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDownloader.h; sourceTree = "<group>"; };
 		DF9F358F184094440041426E /* FeedDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDownloader.m; sourceTree = "<group>"; };
 		DF9F359118409C3F0041426E /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
@@ -61,8 +64,8 @@
 		DFCCA0B0181D33F80059C870 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DFCCA0B1181D33F80059C870 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DFCCA0B4181D33F80059C870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DFCCA0B6181D33F80059C870 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DFCCA0B7181D33F80059C870 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DFCCA0B6181D33F80059C870 /* HotEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotEntryViewController.h; sourceTree = "<group>"; };
+		DFCCA0B7181D33F80059C870 /* HotEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotEntryViewController.m; sourceTree = "<group>"; };
 		DFCCA0B9181D33F80059C870 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFCCA0BF181D33F80059C870 /* HatebuPocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HatebuPocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCCA0C0181D33F80059C870 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -96,6 +99,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF12B9401841DEEA00660DE7 /* HotEntry */ = {
+			isa = PBXGroup;
+			children = (
+				DFC21CB21840E5D80016826A /* FeedItem.h */,
+				DFC21CB31840E5D80016826A /* FeedItem.m */,
+				DFC21CB51840E6BC0016826A /* FeedItemManager.h */,
+				DFC21CB61840E6BC0016826A /* FeedItemManager.m */,
+				DFCCA0B6181D33F80059C870 /* HotEntryViewController.h */,
+				DFCCA0B7181D33F80059C870 /* HotEntryViewController.m */,
+			);
+			name = HotEntry;
+			sourceTree = "<group>";
+		};
+		DF12B9411841DF2200660DE7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DF12B93D1841DE6D00660DE7 /* CategoryViewController.h */,
+				DF12B93E1841DE6D00660DE7 /* CategoryViewController.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		DFCCA095181D33F80059C870 = {
 			isa = PBXGroup;
 			children = (
@@ -131,22 +156,18 @@
 		DFCCA0A7181D33F80059C870 /* HatebuPocket */ = {
 			isa = PBXGroup;
 			children = (
+				DF12B9411841DF2200660DE7 /* Category */,
+				DF12B9401841DEEA00660DE7 /* HotEntry */,
 				DF9F35941840B3FA0041426E /* XMLReader.h */,
 				DF9F35951840B3FA0041426E /* XMLReader.m */,
 				DFCCA0B0181D33F80059C870 /* AppDelegate.h */,
 				DFCCA0B1181D33F80059C870 /* AppDelegate.m */,
 				DFCCA0B3181D33F80059C870 /* Main.storyboard */,
-				DFCCA0B6181D33F80059C870 /* ViewController.h */,
-				DFCCA0B7181D33F80059C870 /* ViewController.m */,
 				DFCCA0B9181D33F80059C870 /* Images.xcassets */,
 				DFCCA0A8181D33F80059C870 /* Supporting Files */,
 				DF9F358E184094440041426E /* FeedDownloader.h */,
 				DF9F358F184094440041426E /* FeedDownloader.m */,
 				DF9F359118409C3F0041426E /* Define.h */,
-				DFC21CB21840E5D80016826A /* FeedItem.h */,
-				DFC21CB31840E5D80016826A /* FeedItem.m */,
-				DFC21CB51840E6BC0016826A /* FeedItemManager.h */,
-				DFC21CB61840E6BC0016826A /* FeedItemManager.m */,
 			);
 			path = HatebuPocket;
 			sourceTree = "<group>";
@@ -312,7 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFCCA0B8181D33F80059C870 /* ViewController.m in Sources */,
+				DF12B93F1841DE6D00660DE7 /* CategoryViewController.m in Sources */,
+				DFCCA0B8181D33F80059C870 /* HotEntryViewController.m in Sources */,
 				DFCCA0B2181D33F80059C870 /* AppDelegate.m in Sources */,
 				DF9F35961840B3FA0041426E /* XMLReader.m in Sources */,
 				DFCCA0AE181D33F80059C870 /* main.m in Sources */,

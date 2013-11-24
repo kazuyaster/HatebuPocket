@@ -26,12 +26,19 @@
                                                                          NSURL *documentsDirectoryPath = [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]];
                                                                          return [documentsDirectoryPath URLByAppendingPathComponent:[targetPath lastPathComponent]];
                                                                      } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+                                                                         if (error)return ;
+                                                                         
                                                                          NSLog(@"File downloaded to: %@", filePath);
                                                                          
                                                                          NSString *feedString = [NSString stringWithContentsOfURL:filePath
                                                                                                                          encoding:NSUTF8StringEncoding
                                                                                                                             error:&error];
+                                                                         if (error)return;
+                                                                         
                                                                          NSDictionary *feedDict = [XMLReader dictionaryForXMLString:feedString error:&error];
+                                                                         
+                                                                         if (error) return;
+                                                                         
                                                                          NSDictionary *userInfo = @{@"feed":feedDict};
                                                                          NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
                                                                          [notificationCenter postNotificationName:KODDownloadFeedNotification object:userInfo];

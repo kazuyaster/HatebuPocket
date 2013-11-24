@@ -10,7 +10,7 @@
 
 
 
-@interface ViewController : UIViewController
+@interface HotEntryViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-
+@property (nonatomic,strong) NSString *categoryKeyword;
 @end
