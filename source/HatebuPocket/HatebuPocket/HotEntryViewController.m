@@ -10,11 +10,13 @@
 #import "FeedDownloader.h"
 #import "FeedItemManager.h"
 #import "FeedItem.h"
+#import "HotEntrySelectDelegate.h"
+#import "ItemViewController.h"
 
 #define BASE_URL @"http://b.hatena.ne.jp/entrylist/%@?sort=hot&threshold=&mode=rss"
 
 
-@interface HotEntryViewController (){
+@interface HotEntryViewController () <HotEntrySelectDelegate>{
     FeedDownloader *_feedDownloader;
     FeedItemManager *_feedManager;
 }
@@ -35,7 +37,9 @@
     
     _feedManager = [[FeedItemManager alloc]init];
     _myTableView.dataSource = _feedManager;
-    _myTableView.dataSource = _feedManager;
+    _myTableView.delegate = _feedManager;
+    
+    [_feedManager setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,5 +101,15 @@
         
     }
 }
+
+- (void)selected:(FeedItem *)item{
+    
+    ItemViewController *itemViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"itemWebView"];
+    [itemViewController setUrlString:item.link];
+    [self.navigationController pushViewController:itemViewController animated:YES];
+    
+}
+
+
 
 @end
