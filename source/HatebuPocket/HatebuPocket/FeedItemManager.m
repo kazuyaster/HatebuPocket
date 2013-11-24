@@ -84,7 +84,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (_delegate) {
+        if ([_delegate conformsToProtocol:@protocol(HotEntrySelectDelegate) ]) {
+            if ([_delegate respondsToSelector:@selector(selected:)]) {
+                
+                [_delegate performSelector:@selector(selected:) withObject:_items[indexPath.row]];
+            }
+        }
+    }
 }
 
 @end

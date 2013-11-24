@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HotEntrySelectDelegate.h"
 
 @class FeedItem;
 
-@interface FeedItemManager : NSObject <UITableViewDataSource,UITableViewDataSource>
+@interface FeedItemManager : NSObject <UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong) NSMutableArray *items;
+@property(nonatomic,strong) id<HotEntrySelectDelegate> delegate;
 
 - (void)addItem:(FeedItem*)item;
 - (void)insertItem:(FeedItem*)item atIndex:(int)index;
