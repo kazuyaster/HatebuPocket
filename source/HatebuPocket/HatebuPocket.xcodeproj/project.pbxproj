@@ -28,6 +28,9 @@
 		DFCCA0C3181D33F80059C870 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A5181D33F80059C870 /* UIKit.framework */; };
 		DFCCA0CB181D33F80059C870 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFCCA0C9181D33F80059C870 /* InfoPlist.strings */; };
 		DFCCA0CD181D33F80059C870 /* HatebuPocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0CC181D33F80059C870 /* HatebuPocketTests.m */; };
+		DFF173C8184A1853003B4481 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF173C7184A1853003B4481 /* FeedCell.m */; };
+		DFF173CA184A1863003B4481 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF173C9184A1863003B4481 /* FeedCell.xib */; };
+		DFF173CE184A1A22003B4481 /* UIView+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF173CD184A1A22003B4481 /* UIView+extention.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,11 @@
 		DFCCA0C8181D33F80059C870 /* HatebuPocketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HatebuPocketTests-Info.plist"; sourceTree = "<group>"; };
 		DFCCA0CA181D33F80059C870 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DFCCA0CC181D33F80059C870 /* HatebuPocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HatebuPocketTests.m; sourceTree = "<group>"; };
+		DFF173C6184A1853003B4481 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		DFF173C7184A1853003B4481 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		DFF173C9184A1863003B4481 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		DFF173CC184A1A22003B4481 /* UIView+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extention.h"; sourceTree = "<group>"; };
+		DFF173CD184A1A22003B4481 /* UIView+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extention.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		DF12B9401841DEEA00660DE7 /* HotEntry */ = {
 			isa = PBXGroup;
 			children = (
+				DFF173C5184A183B003B4481 /* Cell */,
 				DFC21CB21840E5D80016826A /* FeedItem.h */,
 				DFC21CB31840E5D80016826A /* FeedItem.m */,
 				DFC21CB51840E6BC0016826A /* FeedItemManager.h */,
@@ -170,6 +179,7 @@
 		DFCCA0A7181D33F80059C870 /* HatebuPocket */ = {
 			isa = PBXGroup;
 			children = (
+				DFF173CB184A19B6003B4481 /* Common */,
 				DF366BD518422DAF00D7279A /* WebView */,
 				DF12B9411841DF2200660DE7 /* Category */,
 				DF12B9401841DEEA00660DE7 /* HotEntry */,
@@ -214,6 +224,25 @@
 				DFCCA0C9181D33F80059C870 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF173C5184A183B003B4481 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173C6184A1853003B4481 /* FeedCell.h */,
+				DFF173C7184A1853003B4481 /* FeedCell.m */,
+				DFF173C9184A1863003B4481 /* FeedCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		DFF173CB184A19B6003B4481 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173CC184A1A22003B4481 /* UIView+extention.h */,
+				DFF173CD184A1A22003B4481 /* UIView+extention.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFCCA0BA181D33F80059C870 /* Images.xcassets in Resources */,
+				DFF173CA184A1863003B4481 /* FeedCell.xib in Resources */,
 				DFCCA0AC181D33F80059C870 /* InfoPlist.strings in Resources */,
 				DFCCA0B5181D33F80059C870 /* Main.storyboard in Resources */,
 			);
@@ -352,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF12B93F1841DE6D00660DE7 /* CategoryViewController.m in Sources */,
+				DFF173C8184A1853003B4481 /* FeedCell.m in Sources */,
 				DF366BD818422DC900D7279A /* ItemViewController.m in Sources */,
 				DFCCA0B8181D33F80059C870 /* HotEntryViewController.m in Sources */,
 				DFCCA0B2181D33F80059C870 /* AppDelegate.m in Sources */,
@@ -360,6 +391,7 @@
 				DFC21CB71840E6BC0016826A /* FeedItemManager.m in Sources */,
 				DFC21CB41840E5D80016826A /* FeedItem.m in Sources */,
 				DF9F3590184094440041426E /* FeedDownloader.m in Sources */,
+				DFF173CE184A1A22003B4481 /* UIView+extention.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

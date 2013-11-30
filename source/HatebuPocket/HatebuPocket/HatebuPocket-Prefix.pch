@@ -14,6 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "Define.h"
+    #import "UIView+extention.h"
 
     //オブジェクトが空かどうか判別する
     static inline BOOL isEmpty(id object) {
