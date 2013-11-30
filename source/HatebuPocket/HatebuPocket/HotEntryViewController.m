@@ -12,13 +12,13 @@
 #import "FeedItem.h"
 #import "HotEntrySelectDelegate.h"
 #import "ItemViewController.h"
+#import "FeedCell.h"
 
 #define BASE_URL @"http://b.hatena.ne.jp/entrylist/%@?sort=hot&threshold=&mode=rss"
 
 
 @interface HotEntryViewController () <HotEntrySelectDelegate>{
     FeedDownloader *_feedDownloader;
-    FeedItemManager *_feedManager;
 }
 
 @end
@@ -33,13 +33,22 @@
     [_feedDownloader dictionaryFromRSSWithURL:[NSString stringWithFormat:BASE_URL,_categoryKeyword]];
     
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-    [notificationCenter addObserver:self selector:@selector(downloadedFeed:) name:KODDownloadFeedNotification object:nil];
+    [notificationCenter addObserver:[FeedItemManager sharedManager] selector:@selector(downloadedFeed:) name:KODDownloadFeedNotification object:nil];
     
-    _feedManager = [[FeedItemManager alloc]init];
-    _myTableView.dataSource = _feedManager;
-    _myTableView.delegate = _feedManager;
+    _tableView.dataSource = [FeedItemManager sharedManager];
+    _tableView.delegate = [FeedItemManager sharedManager];
     
-    [_feedManager setDelegate:self];
+    [_tableView registerNib:[FeedCell loadFromNib] forCellReuseIdentifier:@"FeedCell"];
+    [[FeedItemManager sharedManager] setItems:[NSMutableArray array]];
+    
+    [[FeedItemManager sharedManager] addObserver:self forKeyPath:@"items" options:NSKeyValueObservingOptionNew context:nil];
+    
+    [[FeedItemManager sharedManager] setDelegate:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,67 +58,61 @@
 }
 
 - (void)dealloc{
+
     
+    [[FeedItemManager sharedManager]removeObserver:self forKeyPath:@"items" context:nil];
 }
 
--(void)downloadedFeed:(NSNotification*)notification{
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     
-    NSMutableArray *items = [[NSMutableArray alloc]init];
-
-    NSDictionary *feedDict = (NSDictionary*)notification;
-    
-    @try {
-
-        NSArray *tmpItems = [feedDict valueForKeyPath:@"object.feed.rdf:RDF.item"];
-        
-        for (NSDictionary *tmpDict in tmpItems) {
-
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"title.text"]);
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"content:encoded.text"]);
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"dc:date.text"]);
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"dc:subject.text"]);
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"description.text"]);
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"hatena:bookmarkcount.text"]);
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"link.text"]);
-            NSLog(@"%@",[tmpDict valueForKeyPath:@"rdf:about"]);
-            
-            FeedItem *item = [[FeedItem alloc]initWithTitle:[tmpDict valueForKeyPath:@"title.text"]
-                                              encodeContent:[tmpDict valueForKeyPath:@"content:encoded.text"]
-                                                       date:[tmpDict valueForKeyPath:@"dc:date.text"]
-                                                    subject:[tmpDict valueForKeyPath:@"dc:subject.text"]
-                                                description:[tmpDict valueForKeyPath:@"description.text"]
-                                              bookmarkCount:[tmpDict valueForKeyPath:@"hatena:bookmarkcount.text"]
-                                                       link:[tmpDict valueForKeyPath:@"link.text"]
-                                                      about:[tmpDict valueForKeyPath:@"rdf:about"]];
-            [items addObject:item];
-        }
-        
-        NSLog(@"%@",items);
-        _feedManager.items = items;
-        [_myTableView reloadData];
-        
-    }
-    @catch (NSException *exception) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:exception.name
-                                                       message:exception.reason
-                                                      delegate:nil
-                                             cancelButtonTitle:nil
-                                             otherButtonTitles:@"OK", nil];
-        [alert show];
-    }
-    @finally {
-        
-    }
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter removeObserver:[FeedItemManager sharedManager]];
 }
 
 - (void)selected:(FeedItem *)item{
     
     ItemViewController *itemViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"itemWebView"];
     [itemViewController setUrlString:item.link];
+    [itemViewController setTitle:item.title];
     [self.navigationController pushViewController:itemViewController animated:YES];
     
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context{
+    
+    if (object == [FeedItemManager sharedManager] && [keyPath isEqualToString:@"items"]) {
+        
+        NSIndexSet *indexSet = change[NSKeyValueChangeIndexesKey];
+        if (indexSet == nil) {
+            return;
+        }
+        NSKeyValueChange changeKind = (NSKeyValueChange)[change[NSKeyValueChangeKindKey] integerValue];
+        NSMutableArray *indexPaths = [NSMutableArray array];
+        
+        [indexSet enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL *stop) {
+            [indexPaths addObject:[NSIndexPath indexPathForRow:idx inSection:0]];
+        }];
+
+        
+        [self.tableView beginUpdates];
+        if (changeKind == NSKeyValueChangeInsertion) {
+            [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+        else if (changeKind == NSKeyValueChangeRemoval){
+            [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+        else if (changeKind == NSKeyValueChangeReplacement){
+            [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+        
+        [self.tableView endUpdates];
+        [self.tableView reloadData];
+    }
+}
 
 
 @end

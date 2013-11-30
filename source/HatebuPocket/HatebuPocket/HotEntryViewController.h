@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-
 @interface HotEntryViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong) NSString *categoryKeyword;
 @end

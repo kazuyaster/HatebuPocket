@@ -21,11 +21,16 @@
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request
                                                                      progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
                                                                          NSURL *documentsDirectoryPath = [NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]];
                                                                          return [documentsDirectoryPath URLByAppendingPathComponent:[targetPath lastPathComponent]];
                                                                      } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+                                                                         
+                                                                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                                                                         
                                                                          if (error)return ;
                                                                          
                                                                          NSLog(@"File downloaded to: %@", filePath);

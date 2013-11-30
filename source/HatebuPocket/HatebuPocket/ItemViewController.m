@@ -8,7 +8,7 @@
 
 #import "ItemViewController.h"
 
-@interface ItemViewController ()
+@interface ItemViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *itemWebViw;
 
 @end
@@ -27,10 +27,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [_itemWebViw setDelegate:self];
 
     NSURL *url = [NSURL URLWithString:_urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
     [_itemWebViw loadRequest:request];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)didReceiveMemoryWarning
