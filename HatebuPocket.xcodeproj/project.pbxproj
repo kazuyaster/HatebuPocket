@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D0C534EC02044FE91933169 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 298930899A9648709C93FB6A /* libPods.a */; };
+		DF12B93F1841DE6D00660DE7 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF12B93E1841DE6D00660DE7 /* CategoryViewController.m */; };
+		DF366BD818422DC900D7279A /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF366BD718422DC900D7279A /* ItemViewController.m */; };
+		DF9F3590184094440041426E /* FeedDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F358F184094440041426E /* FeedDownloader.m */; };
+		DF9F35961840B3FA0041426E /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9F35951840B3FA0041426E /* XMLReader.m */; };
+		DFC21CB41840E5D80016826A /* FeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC21CB31840E5D80016826A /* FeedItem.m */; };
+		DFC21CB71840E6BC0016826A /* FeedItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC21CB61840E6BC0016826A /* FeedItemManager.m */; };
+		DFCCA0A2181D33F80059C870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A1181D33F80059C870 /* Foundation.framework */; };
+		DFCCA0A4181D33F80059C870 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */; };
+		DFCCA0A6181D33F80059C870 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A5181D33F80059C870 /* UIKit.framework */; };
+		DFCCA0AC181D33F80059C870 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFCCA0AA181D33F80059C870 /* InfoPlist.strings */; };
+		DFCCA0AE181D33F80059C870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0AD181D33F80059C870 /* main.m */; };
+		DFCCA0B2181D33F80059C870 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0B1181D33F80059C870 /* AppDelegate.m */; };
+		DFCCA0B5181D33F80059C870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCCA0B3181D33F80059C870 /* Main.storyboard */; };
+		DFCCA0B8181D33F80059C870 /* HotEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0B7181D33F80059C870 /* HotEntryViewController.m */; };
+		DFCCA0BA181D33F80059C870 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCCA0B9181D33F80059C870 /* Images.xcassets */; };
+		DFCCA0C1181D33F80059C870 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0C0181D33F80059C870 /* XCTest.framework */; };
+		DFCCA0C2181D33F80059C870 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A1181D33F80059C870 /* Foundation.framework */; };
+		DFCCA0C3181D33F80059C870 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCCA0A5181D33F80059C870 /* UIKit.framework */; };
+		DFCCA0CB181D33F80059C870 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFCCA0C9181D33F80059C870 /* InfoPlist.strings */; };
+		DFCCA0CD181D33F80059C870 /* HatebuPocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCCA0CC181D33F80059C870 /* HatebuPocketTests.m */; };
+		DFF173C8184A1853003B4481 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF173C7184A1853003B4481 /* FeedCell.m */; };
+		DFF173CA184A1863003B4481 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF173C9184A1863003B4481 /* FeedCell.xib */; };
+		DFF173CE184A1A22003B4481 /* UIView+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF173CD184A1A22003B4481 /* UIView+extention.m */; };
+		DFF173D2184B2423003B4481 /* iOS-Application.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173CF184B2423003B4481 /* iOS-Application.xcconfig */; };
+		DFF173D3184B2423003B4481 /* iOS-Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */; };
+		DFF173D4184B2423003B4481 /* iOS-StaticLibrary.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */; };
+		DFF173D6184B34FC003B4481 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF173D5184B34FC003B4481 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFCCA0C4181D33F80059C870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFCCA096181D33F80059C870 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFCCA09D181D33F80059C870;
+			remoteInfo = HatebuPocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		298930899A9648709C93FB6A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		580BADEE5F014C9AA0A7AF68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DF12B93D1841DE6D00660DE7 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		DF12B93E1841DE6D00660DE7 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		DF366BD618422DC900D7279A /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		DF366BD718422DC900D7279A /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		DF366BD918422EBA00D7279A /* HotEntrySelectDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotEntrySelectDelegate.h; sourceTree = "<group>"; };
+		DF9F358E184094440041426E /* FeedDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDownloader.h; sourceTree = "<group>"; };
+		DF9F358F184094440041426E /* FeedDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDownloader.m; sourceTree = "<group>"; };
+		DF9F359118409C3F0041426E /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		DF9F35941840B3FA0041426E /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		DF9F35951840B3FA0041426E /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		DFC21CB21840E5D80016826A /* FeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItem.h; sourceTree = "<group>"; };
+		DFC21CB31840E5D80016826A /* FeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItem.m; sourceTree = "<group>"; };
+		DFC21CB51840E6BC0016826A /* FeedItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemManager.h; sourceTree = "<group>"; };
+		DFC21CB61840E6BC0016826A /* FeedItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemManager.m; sourceTree = "<group>"; };
+		DFCCA09E181D33F80059C870 /* HatebuPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatebuPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFCCA0A1181D33F80059C870 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DFCCA0A5181D33F80059C870 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DFCCA0A9181D33F80059C870 /* HatebuPocket-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HatebuPocket-Info.plist"; sourceTree = "<group>"; };
+		DFCCA0AB181D33F80059C870 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DFCCA0AD181D33F80059C870 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DFCCA0AF181D33F80059C870 /* HatebuPocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HatebuPocket-Prefix.pch"; sourceTree = "<group>"; };
+		DFCCA0B0181D33F80059C870 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DFCCA0B1181D33F80059C870 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DFCCA0B4181D33F80059C870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFCCA0B6181D33F80059C870 /* HotEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotEntryViewController.h; sourceTree = "<group>"; };
+		DFCCA0B7181D33F80059C870 /* HotEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotEntryViewController.m; sourceTree = "<group>"; };
+		DFCCA0B9181D33F80059C870 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DFCCA0BF181D33F80059C870 /* HatebuPocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HatebuPocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFCCA0C0181D33F80059C870 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DFCCA0C8181D33F80059C870 /* HatebuPocketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HatebuPocketTests-Info.plist"; sourceTree = "<group>"; };
+		DFCCA0CA181D33F80059C870 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DFCCA0CC181D33F80059C870 /* HatebuPocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HatebuPocketTests.m; sourceTree = "<group>"; };
+		DFF173C6184A1853003B4481 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
+		DFF173C7184A1853003B4481 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
+		DFF173C9184A1863003B4481 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		DFF173CC184A1A22003B4481 /* UIView+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extention.h"; sourceTree = "<group>"; };
+		DFF173CD184A1A22003B4481 /* UIView+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extention.m"; sourceTree = "<group>"; };
+		DFF173CF184B2423003B4481 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		DFF173D5184B34FC003B4481 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFCCA09B181D33F80059C870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF173D6184B34FC003B4481 /* QuartzCore.framework in Frameworks */,
+				DFCCA0A4181D33F80059C870 /* CoreGraphics.framework in Frameworks */,
+				DFCCA0A6181D33F80059C870 /* UIKit.framework in Frameworks */,
+				DFCCA0A2181D33F80059C870 /* Foundation.framework in Frameworks */,
+				7D0C534EC02044FE91933169 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFCCA0BC181D33F80059C870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFCCA0C1181D33F80059C870 /* XCTest.framework in Frameworks */,
+				DFCCA0C3181D33F80059C870 /* UIKit.framework in Frameworks */,
+				DFCCA0C2181D33F80059C870 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF12B9401841DEEA00660DE7 /* HotEntry */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173C5184A183B003B4481 /* Cell */,
+				DFC21CB21840E5D80016826A /* FeedItem.h */,
+				DFC21CB31840E5D80016826A /* FeedItem.m */,
+				DFC21CB51840E6BC0016826A /* FeedItemManager.h */,
+				DFC21CB61840E6BC0016826A /* FeedItemManager.m */,
+				DFCCA0B6181D33F80059C870 /* HotEntryViewController.h */,
+				DFCCA0B7181D33F80059C870 /* HotEntryViewController.m */,
+				DF366BD918422EBA00D7279A /* HotEntrySelectDelegate.h */,
+			);
+			name = HotEntry;
+			sourceTree = "<group>";
+		};
+		DF12B9411841DF2200660DE7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DF12B93D1841DE6D00660DE7 /* CategoryViewController.h */,
+				DF12B93E1841DE6D00660DE7 /* CategoryViewController.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		DF366BD518422DAF00D7279A /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				DF366BD618422DC900D7279A /* ItemViewController.h */,
+				DF366BD718422DC900D7279A /* ItemViewController.m */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
+		DFCCA095181D33F80059C870 = {
+			isa = PBXGroup;
+			children = (
+				DFCCA0A7181D33F80059C870 /* HatebuPocket */,
+				DFCCA0C6181D33F80059C870 /* HatebuPocketTests */,
+				DFCCA0A0181D33F80059C870 /* Frameworks */,
+				DFCCA09F181D33F80059C870 /* Products */,
+				580BADEE5F014C9AA0A7AF68 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		DFCCA09F181D33F80059C870 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFCCA09E181D33F80059C870 /* HatebuPocket.app */,
+				DFCCA0BF181D33F80059C870 /* HatebuPocketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFCCA0A0181D33F80059C870 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173D5184B34FC003B4481 /* QuartzCore.framework */,
+				DFCCA0A1181D33F80059C870 /* Foundation.framework */,
+				DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */,
+				DFCCA0A5181D33F80059C870 /* UIKit.framework */,
+				DFCCA0C0181D33F80059C870 /* XCTest.framework */,
+				298930899A9648709C93FB6A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFCCA0A7181D33F80059C870 /* HatebuPocket */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173CB184A19B6003B4481 /* Common */,
+				DF366BD518422DAF00D7279A /* WebView */,
+				DF12B9411841DF2200660DE7 /* Category */,
+				DF12B9401841DEEA00660DE7 /* HotEntry */,
+				DF9F35941840B3FA0041426E /* XMLReader.h */,
+				DF9F35951840B3FA0041426E /* XMLReader.m */,
+				DFCCA0B0181D33F80059C870 /* AppDelegate.h */,
+				DFCCA0B1181D33F80059C870 /* AppDelegate.m */,
+				DFCCA0B3181D33F80059C870 /* Main.storyboard */,
+				DFCCA0B9181D33F80059C870 /* Images.xcassets */,
+				DFCCA0A8181D33F80059C870 /* Supporting Files */,
+				DF9F358E184094440041426E /* FeedDownloader.h */,
+				DF9F358F184094440041426E /* FeedDownloader.m */,
+				DF9F359118409C3F0041426E /* Define.h */,
+			);
+			path = HatebuPocket;
+			sourceTree = "<group>";
+		};
+		DFCCA0A8181D33F80059C870 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173CF184B2423003B4481 /* iOS-Application.xcconfig */,
+				DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */,
+				DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */,
+				DFCCA0A9181D33F80059C870 /* HatebuPocket-Info.plist */,
+				DFCCA0AA181D33F80059C870 /* InfoPlist.strings */,
+				DFCCA0AD181D33F80059C870 /* main.m */,
+				DFCCA0AF181D33F80059C870 /* HatebuPocket-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFCCA0C6181D33F80059C870 /* HatebuPocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFCCA0CC181D33F80059C870 /* HatebuPocketTests.m */,
+				DFCCA0C7181D33F80059C870 /* Supporting Files */,
+			);
+			path = HatebuPocketTests;
+			sourceTree = "<group>";
+		};
+		DFCCA0C7181D33F80059C870 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFCCA0C8181D33F80059C870 /* HatebuPocketTests-Info.plist */,
+				DFCCA0C9181D33F80059C870 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF173C5184A183B003B4481 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173C6184A1853003B4481 /* FeedCell.h */,
+				DFF173C7184A1853003B4481 /* FeedCell.m */,
+				DFF173C9184A1863003B4481 /* FeedCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		DFF173CB184A19B6003B4481 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DFF173CC184A1A22003B4481 /* UIView+extention.h */,
+				DFF173CD184A1A22003B4481 /* UIView+extention.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFCCA09D181D33F80059C870 /* HatebuPocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFCCA0D0181D33F80059C870 /* Build configuration list for PBXNativeTarget "HatebuPocket" */;
+			buildPhases = (
+				1A8AAAD6FDE642EFB9ED2920 /* Check Pods Manifest.lock */,
+				DFCCA09A181D33F80059C870 /* Sources */,
+				DFCCA09B181D33F80059C870 /* Frameworks */,
+				DFCCA09C181D33F80059C870 /* Resources */,
+				3418CA32EA3E4E88813FCE3F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HatebuPocket;
+			productName = HatebuPocket;
+			productReference = DFCCA09E181D33F80059C870 /* HatebuPocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFCCA0BE181D33F80059C870 /* HatebuPocketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFCCA0D3181D33F80059C870 /* Build configuration list for PBXNativeTarget "HatebuPocketTests" */;
+			buildPhases = (
+				DFCCA0BB181D33F80059C870 /* Sources */,
+				DFCCA0BC181D33F80059C870 /* Frameworks */,
+				DFCCA0BD181D33F80059C870 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFCCA0C5181D33F80059C870 /* PBXTargetDependency */,
+			);
+			name = HatebuPocketTests;
+			productName = HatebuPocketTests;
+			productReference = DFCCA0BF181D33F80059C870 /* HatebuPocketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFCCA096181D33F80059C870 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "小田 和哉";
+				TargetAttributes = {
+					DFCCA09D181D33F80059C870 = {
+						DevelopmentTeam = 6TRV7924WY;
+					};
+					DFCCA0BE181D33F80059C870 = {
+						TestTargetID = DFCCA09D181D33F80059C870;
+					};
+				};
+			};
+			buildConfigurationList = DFCCA099181D33F80059C870 /* Build configuration list for PBXProject "HatebuPocket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFCCA095181D33F80059C870;
+			productRefGroup = DFCCA09F181D33F80059C870 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFCCA09D181D33F80059C870 /* HatebuPocket */,
+				DFCCA0BE181D33F80059C870 /* HatebuPocketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFCCA09C181D33F80059C870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF173D2184B2423003B4481 /* iOS-Application.xcconfig in Resources */,
+				DFF173D4184B2423003B4481 /* iOS-StaticLibrary.xcconfig in Resources */,
+				DFCCA0BA181D33F80059C870 /* Images.xcassets in Resources */,
+				DFF173CA184A1863003B4481 /* FeedCell.xib in Resources */,
+				DFCCA0AC181D33F80059C870 /* InfoPlist.strings in Resources */,
+				DFCCA0B5181D33F80059C870 /* Main.storyboard in Resources */,
+				DFF173D3184B2423003B4481 /* iOS-Base.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFCCA0BD181D33F80059C870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFCCA0CB181D33F80059C870 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A8AAAD6FDE642EFB9ED2920 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3418CA32EA3E4E88813FCE3F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFCCA09A181D33F80059C870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF12B93F1841DE6D00660DE7 /* CategoryViewController.m in Sources */,
+				DFF173C8184A1853003B4481 /* FeedCell.m in Sources */,
+				DF366BD818422DC900D7279A /* ItemViewController.m in Sources */,
+				DFCCA0B8181D33F80059C870 /* HotEntryViewController.m in Sources */,
+				DFCCA0B2181D33F80059C870 /* AppDelegate.m in Sources */,
+				DF9F35961840B3FA0041426E /* XMLReader.m in Sources */,
+				DFCCA0AE181D33F80059C870 /* main.m in Sources */,
+				DFC21CB71840E6BC0016826A /* FeedItemManager.m in Sources */,
+				DFC21CB41840E5D80016826A /* FeedItem.m in Sources */,
+				DF9F3590184094440041426E /* FeedDownloader.m in Sources */,
+				DFF173CE184A1A22003B4481 /* UIView+extention.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFCCA0BB181D33F80059C870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFCCA0CD181D33F80059C870 /* HatebuPocketTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFCCA0C5181D33F80059C870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFCCA09D181D33F80059C870 /* HatebuPocket */;
+			targetProxy = DFCCA0C4181D33F80059C870 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFCCA0AA181D33F80059C870 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFCCA0AB181D33F80059C870 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DFCCA0B3181D33F80059C870 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFCCA0B4181D33F80059C870 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFCCA0C9181D33F80059C870 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFCCA0CA181D33F80059C870 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFCCA0CE181D33F80059C870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUYA ODA (6TRV7924WY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: KAZUYA ODA (6TRV7924WY)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2AFAD70D-1BAD-482D-BE09-ED66B565571D";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DFCCA0CF181D33F80059C870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KAZUYA ODA (6TRV7924WY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: KAZUYA ODA (6TRV7924WY)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PROVISIONING_PROFILE = "2AFAD70D-1BAD-482D-BE09-ED66B565571D";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFCCA0D1181D33F80059C870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 580BADEE5F014C9AA0A7AF68 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"$(nherited)",
+				);
+				INFOPLIST_FILE = "HatebuPocket/HatebuPocket-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(nherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DFCCA0D2181D33F80059C870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 580BADEE5F014C9AA0A7AF68 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"$(nherited)",
+				);
+				INFOPLIST_FILE = "HatebuPocket/HatebuPocket-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(nherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DFCCA0D4181D33F80059C870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatebuPocket.app/HatebuPocket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HatebuPocketTests/HatebuPocketTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DFCCA0D5181D33F80059C870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatebuPocket.app/HatebuPocket";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
+				INFOPLIST_FILE = "HatebuPocketTests/HatebuPocketTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFCCA099181D33F80059C870 /* Build configuration list for PBXProject "HatebuPocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFCCA0CE181D33F80059C870 /* Debug */,
+				DFCCA0CF181D33F80059C870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFCCA0D0181D33F80059C870 /* Build configuration list for PBXNativeTarget "HatebuPocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFCCA0D1181D33F80059C870 /* Debug */,
+				DFCCA0D2181D33F80059C870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFCCA0D3181D33F80059C870 /* Build configuration list for PBXNativeTarget "HatebuPocketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFCCA0D4181D33F80059C870 /* Debug */,
+				DFCCA0D5181D33F80059C870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFCCA096181D33F80059C870 /* Project object */;
+}
