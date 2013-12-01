@@ -31,6 +31,10 @@
 		DFF173C8184A1853003B4481 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF173C7184A1853003B4481 /* FeedCell.m */; };
 		DFF173CA184A1863003B4481 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF173C9184A1863003B4481 /* FeedCell.xib */; };
 		DFF173CE184A1A22003B4481 /* UIView+extention.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF173CD184A1A22003B4481 /* UIView+extention.m */; };
+		DFF173D2184B2423003B4481 /* iOS-Application.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173CF184B2423003B4481 /* iOS-Application.xcconfig */; };
+		DFF173D3184B2423003B4481 /* iOS-Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */; };
+		DFF173D4184B2423003B4481 /* iOS-StaticLibrary.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */; };
+		DFF173D6184B34FC003B4481 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF173D5184B34FC003B4481 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		DFF173C9184A1863003B4481 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		DFF173CC184A1A22003B4481 /* UIView+extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extention.h"; sourceTree = "<group>"; };
 		DFF173CD184A1A22003B4481 /* UIView+extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extention.m"; sourceTree = "<group>"; };
+		DFF173CF184B2423003B4481 /* iOS-Application.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		DFF173D5184B34FC003B4481 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF173D6184B34FC003B4481 /* QuartzCore.framework in Frameworks */,
 				DFCCA0A4181D33F80059C870 /* CoreGraphics.framework in Frameworks */,
 				DFCCA0A6181D33F80059C870 /* UIKit.framework in Frameworks */,
 				DFCCA0A2181D33F80059C870 /* Foundation.framework in Frameworks */,
@@ -167,6 +176,7 @@
 		DFCCA0A0181D33F80059C870 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFF173D5184B34FC003B4481 /* QuartzCore.framework */,
 				DFCCA0A1181D33F80059C870 /* Foundation.framework */,
 				DFCCA0A3181D33F80059C870 /* CoreGraphics.framework */,
 				DFCCA0A5181D33F80059C870 /* UIKit.framework */,
@@ -200,6 +210,9 @@
 		DFCCA0A8181D33F80059C870 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DFF173CF184B2423003B4481 /* iOS-Application.xcconfig */,
+				DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */,
+				DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */,
 				DFCCA0A9181D33F80059C870 /* HatebuPocket-Info.plist */,
 				DFCCA0AA181D33F80059C870 /* InfoPlist.strings */,
 				DFCCA0AD181D33F80059C870 /* main.m */,
@@ -326,10 +339,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF173D2184B2423003B4481 /* iOS-Application.xcconfig in Resources */,
+				DFF173D4184B2423003B4481 /* iOS-StaticLibrary.xcconfig in Resources */,
 				DFCCA0BA181D33F80059C870 /* Images.xcassets in Resources */,
 				DFF173CA184A1863003B4481 /* FeedCell.xib in Resources */,
 				DFCCA0AC181D33F80059C870 /* InfoPlist.strings in Resources */,
 				DFCCA0B5181D33F80059C870 /* Main.storyboard in Resources */,
+				DFF173D3184B2423003B4481 /* iOS-Base.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +545,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"$(nherited)",
+				);
 				INFOPLIST_FILE = "HatebuPocket/HatebuPocket-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(nherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -546,7 +568,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HatebuPocket/HatebuPocket-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/AFNetworking\"",
+					"$(nherited)",
+				);
 				INFOPLIST_FILE = "HatebuPocket/HatebuPocket-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(nherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

@@ -147,7 +147,7 @@ static FeedItemManager *_sharedInstance = nil;
 
     }
     @catch (NSException *exception) {
-        UIAlertView *alertまわりくどい = [[UIAlertView alloc]initWithTitle:exception.name
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:exception.name
                                                        message:exception.reason
                                                       delegate:nil
                                              cancelButtonTitle:nil
