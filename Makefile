@@ -1,5 +1,5 @@
-WORKSPACE = source/HatebuPocket/HatebuPocket.xcworkspace
-PROJECT = source/HatebuPocket/HatebuPocket.xcodeproj
+WORKSPACE = HatebuPocket.xcworkspace
+PROJECT = HatebuPocket.xcodeproj
 SCHEME = HatebuPocket
 TEST_TARGET = HatebuPocketTests
 
