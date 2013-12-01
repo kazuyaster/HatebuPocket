@@ -2,6 +2,8 @@ language: objective-c
 
 before_install:
   - gem install cocoapods
-
+  - sudo easy_install cpp-coveralls
 script:
-  - make clean test
+  - make clean test-with-coverage
+after_success:
+  - make send-coverage
