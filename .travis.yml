@@ -4,4 +4,4 @@ before_install:
   - gem install cocoapods
 
 script:
-  - make clean build
+  - make clean test
