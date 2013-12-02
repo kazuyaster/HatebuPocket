@@ -35,6 +35,8 @@
 		DFF173D3184B2423003B4481 /* iOS-Base.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */; };
 		DFF173D4184B2423003B4481 /* iOS-StaticLibrary.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */; };
 		DFF173D6184B34FC003B4481 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF173D5184B34FC003B4481 /* QuartzCore.framework */; };
+		DFF173D9184CF0B6003B4481 /* GcovTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF173D8184CF0B6003B4481 /* GcovTestObserver.m */; };
+		DFF173DB184CF12E003B4481 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DFF173DA184CF12E003B4481 /* Debug.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		DFF173D0184B2423003B4481 /* iOS-Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
 		DFF173D1184B2423003B4481 /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		DFF173D5184B34FC003B4481 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DFF173D8184CF0B6003B4481 /* GcovTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GcovTestObserver.m; sourceTree = "<group>"; };
+		DFF173DA184CF12E003B4481 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +221,7 @@
 				DFCCA0AA181D33F80059C870 /* InfoPlist.strings */,
 				DFCCA0AD181D33F80059C870 /* main.m */,
 				DFCCA0AF181D33F80059C870 /* HatebuPocket-Prefix.pch */,
+				DFF173DA184CF12E003B4481 /* Debug.xcconfig */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			children = (
 				DFCCA0CC181D33F80059C870 /* HatebuPocketTests.m */,
 				DFCCA0C7181D33F80059C870 /* Supporting Files */,
+				DFF173D8184CF0B6003B4481 /* GcovTestObserver.m */,
 			);
 			path = HatebuPocketTests;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF173DB184CF12E003B4481 /* Debug.xcconfig in Resources */,
 				DFCCA0CB181D33F80059C870 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF173D9184CF0B6003B4481 /* GcovTestObserver.m in Sources */,
 				DFCCA0CD181D33F80059C870 /* HatebuPocketTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +487,8 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -521,6 +531,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -583,6 +594,7 @@
 		};
 		DFCCA0D4181D33F80059C870 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFF173DA184CF12E003B4481 /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HatebuPocket.app/HatebuPocket";
