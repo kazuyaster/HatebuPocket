@@ -2,8 +2,8 @@
 //  FeedManager.m
 //  HatebuPocket
 //
-//  Created by 小田 和哉 on 2013/11/23.
-//  Copyright (c) 2013年 小田 和哉. All rights reserved.
+//  Created by Kazuyaster on 2013/11/23.
+//  Copyright (c) 2013年 Kazuyaster. All rights reserved.
 //
 
 #import "FeedDownloader.h"
@@ -13,7 +13,6 @@
 @implementation FeedDownloader
 
 - (void)dictionaryFromRSSWithURL:(NSString*)urlString{
-    
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc]initWithSessionConfiguration:configuration];
@@ -40,7 +39,7 @@
                                                                                                                             error:&error];
                                                                          if (error)return;
                                                                          
-                                                                         NSDictionary *feedDict = [XMLReader dictionaryForXMLString:feedString error:&error];
+                                                                         NSDictionary *feedDict = [XMLReader dictionaryForXMLString:feedString error:&error];                                                                    
                                                                          
                                                                          if (error) return;
                                                                          
@@ -49,7 +48,6 @@
                                                                          [notificationCenter postNotificationName:KODDownloadFeedNotification object:userInfo];
                                                                      }];
     [downloadTask resume];
-
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PocketAPI.h"
 
 @implementation AppDelegate
 
@@ -19,10 +20,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    [[PocketAPI sharedAPI] setConsumerKey:@"23600-20fcf4fd2f3c2cd6fa2b612b"];
     return YES;
 }
-							
+
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation{
+    
+    if([[PocketAPI sharedAPI] handleOpenURL:url]){
+        return YES;
+    }else{
+        // if you handle your own custom url-schemes, do it here
+        return NO;
+    }
+    
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

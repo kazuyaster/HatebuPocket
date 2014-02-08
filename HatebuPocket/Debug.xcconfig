@@ -2,8 +2,8 @@
 //  Debug.xcconfig
 //  HatebuPocket
 //
-//  Created by 小田 和哉 on 2013/12/03.
-//  Copyright (c) 2013年 小田 和哉. All rights reserved.
+//  Created by Kazuyaster on 2013/12/03.
+//  Copyright (c) 2013年 Kazuyaster. All rights reserved.
 //
 GCC_GENERATE_TEST_COVERAGE_FILES = YES
 GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES

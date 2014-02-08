@@ -2,11 +2,12 @@
 //  ItemViewController.m
 //  HatebuPocket
 //
-//  Created by 小田 和哉 on 2013/11/24.
-//  Copyright (c) 2013年 小田 和哉. All rights reserved.
+//  Created by Kazuyaster on 2013/11/24.
+//  Copyright (c) 2013年 Kazuyaster. All rights reserved.
 //
 
 #import "ItemViewController.h"
+#import "PocketAPI.h"
 
 @interface ItemViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *itemWebViw;
@@ -28,6 +29,11 @@
 {
     [super viewDidLoad];
     
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                               target:self
+                                                                               action:@selector(save:)];
+    self.navigationItem.rightBarButtonItem = saveButton;
+    
     [_itemWebViw setDelegate:self];
 
     NSURL *url = [NSURL URLWithString:_urlString];
@@ -46,6 +52,20 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+- (void)save:(id)sender{
+ 
+    NSURL *url = [NSURL URLWithString:_urlString];
+    [[PocketAPI sharedAPI] saveURL:url handler: ^(PocketAPI *API, NSURL *URL,NSError *error){
+        if(error){
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Pocket" message:error.localizedDescription delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Pocket" message:@"Page Saved." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
