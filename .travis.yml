@@ -1,7 +1,11 @@
 language: objective-c
 
+cache:
+  directories:
+    - Pods
 before_install:
   - gem install cocoapods
+  - pod setup
   - sudo easy_install cpp-coveralls
 script:
   - make clean test-with-coverage

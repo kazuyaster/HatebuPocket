@@ -14,7 +14,7 @@
 #import "ItemViewController.h"
 #import "FeedCell.h"
 
-#define BASE_URL @"http://b.hatena.ne.jp/entrylist/%@?sort=hot&threshold=&mode=rss"
+#define BASE_URL @"http://b.hatena.ne.jp/entrylist/%@?sort=count&threshold=&mode=rss"
 
 
 @interface HotEntryViewController () <HotEntrySelectDelegate>{
